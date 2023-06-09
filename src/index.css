@@ -47,6 +47,7 @@ p {
 body {
   margin: 0;
   font-family: var(--font-inter);
+  background: var(--off-white);
 }
 
 main {
