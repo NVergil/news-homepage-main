@@ -1,0 +1,362 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap");
+:root {
+  /* ## Colors */
+
+  /* ### Primary */
+
+  --soft-orange: hsl(35, 77%, 62%);
+  --soft-red: hsl(5, 85%, 63%);
+
+  /* ### Neutral */
+
+  --off-white: hsl(36, 100%, 99%);
+  --grayish-blue: hsl(233, 8%, 79%);
+  --dark-grayish-blue: hsl(236, 13%, 42%);
+  --very-dark-blue: hsl(240, 100%, 5%);
+
+  /* ## Typography */
+
+  --size: 15px;
+
+  /* ### Font */
+  /* - Weights: 400, 700, 800 */
+  /* [Inter](https://fonts.google.com/specimen/Inter) */
+  --font-inter: "Inter", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-inter);
+}
+
+main {
+  margin: 0;
+  padding: 2rem;
+  display: grid;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1109px;
+  width: 100%;
+}
+
+.header-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 3.5rem;
+}
+
+a.desk-links {
+  color: var(--dark-grayish-blue);
+  font-weight: 400;
+  margin-inline: 1.2rem;
+}
+a.desk-links:last-child {
+  margin-right: 0;
+}
+a.desk-links:hover {
+  color: var(--soft-red);
+}
+
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 3fr);
+  grid-template-rows: repeat(3, auto);
+  gap: 1.875rem;
+  width: 100%;
+}
+
+._1 {
+  grid-column-start: span 2;
+  width: 100%;
+}
+
+._1 img {
+  object-fit: cover;
+  max-height: 300px;
+  height: 100%;
+  width: 100%;
+}
+
+.mobile._1 {
+  display: none;
+}
+
+._2 {
+  grid-row-start: span 2;
+  height: auto;
+  background: var(--very-dark-blue);
+  color: white;
+  max-width: 350px;
+  width: 100%;
+  padding: 1.5rem;
+  padding-bottom: 2rem;
+}
+
+._2 h2 {
+  text-transform: capitalize;
+  font-size: 2.5rem;
+  color: var(--soft-orange);
+  margin-bottom: 1.8rem;
+}
+
+._2 h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.75rem;
+}
+._2 h3:hover {
+  color: var(--soft-orange);
+  cursor: pointer;
+}
+
+._2 p {
+  font-size: var(--size);
+  color: var(--grayish-blue);
+  line-height: 1.7;
+}
+
+._3 {
+  max-width: 350px;
+  width: 100%;
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+._4 {
+  max-width: 350px;
+  width: 100%;
+}
+
+._4 p {
+  font-size: var(--size);
+  color: var(--dark-grayish-blue);
+  line-height: 1.6;
+}
+
+._4 button {
+  border: none;
+  outline: none;
+  background: var(--soft-red);
+  font-family: var(--font-inter);
+  color: white;
+  padding: 1rem 1.9rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 5px;
+  margin-top: 2.2rem;
+  cursor: pointer;
+  transition: background 100ms ease-in-out;
+}
+._4 button:hover {
+  background: var(--very-dark-blue);
+}
+
+._5 {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+}
+
+._5 picture {
+  max-width: 100px;
+  width: 100%;
+}
+
+._5 img {
+  max-width: 100px;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+._5 span {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--grayish-blue);
+}
+
+._5 h4 {
+  font-size: 18px;
+  font-weight: 800;
+  margin-block: 0.65rem;
+  cursor: pointer;
+}
+._5 h4:hover {
+  color: var(--soft-red);
+}
+
+._5 p {
+  font-size: var(--size);
+  color: var(--dark-grayish-blue);
+  line-height: 1.7;
+}
+
+.line-spacing {
+  border-bottom: 1px solid var(--dark-grayish-blue);
+  margin-block: 1.8rem;
+}
+
+/* Hamburger Menu Styles Start */
+
+a.mob-links {
+  display: block;
+  color: var(--very-dark-blue);
+  font-size: 1.2rem;
+  margin-block: 1.8rem;
+}
+a.mob-links:first-child {
+  margin-top: 5rem;
+}
+/* Position and sizing of burger button */
+.bm-burger-button {
+  position: absolute;
+  width: 2.5rem;
+  height: 1.25rem;
+  right: 36px;
+  top: 36px;
+}
+
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+  background: #373a47;
+}
+
+/* Color/shape of burger icon bars on hover*/
+.bm-burger-bars-hover {
+  background: #a90000;
+}
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+  height: 24px;
+  width: 24px;
+}
+
+/* Color/shape of close button cross */
+.bm-cross {
+  background: #bdc3c7;
+}
+
+/*
+Sidebar wrapper styles
+*/
+.bm-menu-wrap {
+  position: fixed;
+  height: 100%;
+}
+
+/* General sidebar styles */
+.bm-menu {
+  background: #fefefe;
+  padding: 2.5em 1.5em 0;
+  font-size: 1.15em;
+}
+
+/* Wrapper for item list */
+.bm-item-list {
+  color: #b8b7ad;
+  padding: 0.8em;
+}
+
+/* Styling of overlay */
+.bm-overlay {
+  background: rgba(0, 0, 0, 0.3);
+}
+/* Hamburger Menu Styles End */
+
+.attribution {
+  margin-top: 1rem;
+  font-size: 14px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 768px) {
+  main {
+    padding: 1rem;
+  }
+  .grid-container {
+    gap: 1.3rem;
+  }
+  ._2 {
+    padding: 1.35rem;
+  }
+  ._3 {
+    font-size: 3rem;
+  }
+}
+@media screen and (max-width: 680px) {
+  .header-container {
+    margin-bottom: 2rem;
+  }
+  .logo {
+    width: 2.85rem;
+  }
+  .bm-burger-button {
+    top: 24px;
+  }
+  .container {
+    max-width: 500px;
+  }
+  .grid-container {
+    display: flex;
+    flex-direction: column;
+  }
+  ._1 {
+    display: none;
+  }
+  .mobile._1 {
+    display: initial;
+  }
+  ._2 {
+    order: 2;
+    max-width: 100%;
+    margin-bottom: 2.7rem;
+  }
+  ._3,
+  ._4 {
+    order: 1;
+    max-width: 100%;
+  }
+  ._3 {
+    font-size: 2.5rem;
+  }
+  ._4 button {
+    margin-top: 1.5rem;
+    margin-bottom: 3rem;
+  }
+  ._5 {
+    order: 4;
+    margin-bottom: 0.75rem;
+  }
+}
